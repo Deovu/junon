@@ -1631,7 +1631,7 @@
         "speed": 4,
         "reload": 3000,
         "health": 2000,
-        "damage": 10,
+        "damage": 15,
         "range": 256,
         "los": 384
       },
@@ -1686,7 +1686,7 @@
         "speed": 4,
         "reload": 3000,
         "health": 800,
-        "damage": 5,
+        "damage": 10,
         "range": 384,
         "los": 512
       },
@@ -3008,7 +3008,7 @@
         "rotation": 0
       },
       "stats": {
-        "food": 30
+        "food": 40
       },
       "upgrade": {},
       "description": "Orange pumpkin."
@@ -3127,7 +3127,7 @@
         "anchor": 0.5
       },
       "stats": {
-        "food": 80,
+        "food": 100,
         "health": 20
       },
       "requirements": {
