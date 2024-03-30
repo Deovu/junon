@@ -56,6 +56,7 @@ Buildings.Structures.FlamethrowerTurret = require("./towers/flamethrower_turret"
 Buildings.Structures.MissileTurret = require("./towers/missile_turret")
 Buildings.Structures.TeslaCoil = require("./towers/tesla_coil")
 Buildings.Structures.BomberTurret = require("./towers/bomber_turret")
+Buildings.Structures.KeypadDoor = require("./keypad_door")
 
 Buildings.Atmospherics.AirAlarm = require("./air_alarm")
 Buildings.Atmospherics.Ventilator = require("./ventilator")
@@ -97,6 +98,7 @@ Buildings.Furnitures.ChristmasTree = require("./christmas_tree")
 Buildings.Furnitures.RedPresent = require("./red_present")
 Buildings.Furnitures.BluePresent = require("./blue_present")
 Buildings.Furnitures.GreenPresent = require("./green_present")
+Buildings.Furnitures.UnbreakableWall = require("./unbreakable_wall")
 
 // platforms
 Buildings.Floors.Lattice = require("./platforms/lattice")

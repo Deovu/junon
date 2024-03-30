@@ -37,6 +37,8 @@ Equipments.Radio = require("./hand/radio")
 Equipments.AssassinsKnife = require("./hand/assassins_knife")
 Equipments.PocketTrader = require("./hand/pocket_trader")
 Equipments.Bowl = require("./hand/bowl")
+Equipments.Deconstructor = require('./hand/deconstructor')
+Equipments.Dynamite = require('./hand/dynamite')
 
 Equipments.SpaceSuit = require("./armor/space_suit")
 Equipments.CombatArmor = require("./armor/combat_armor")
@@ -53,7 +55,7 @@ Equipments.forType = (type) => {
   return Equipments[klassName]
 }
 
-const craftExcludeList = ["Syringe", "StunBaton", "MolotovCocktail", "Grenade", "PoisonGrenade", "BloodBottle", "CombatArmor", "WaterBottle", "NameTag", "SpaceSuit", "BlueEnergySword", "GreenEnergySword", "RedEnergySword", "Katana", "Radio", "AssassinsKnife", "SantaHat", "HazmatSuit", "PoliceSuit", "PrisonerSuit", "LabCoat", "CultistSuit", "ImperialSpecialForcesArmor"]
+const craftExcludeList = ["Syringe", "StunBaton", "MolotovCocktail", "Grenade", "PoisonGrenade", "BloodBottle", "CombatArmor", "WaterBottle", "NameTag", "SpaceSuit", "BlueEnergySword", "GreenEnergySword", "RedEnergySword", "Katana", "Radio", "AssassinsKnife", "SantaHat", "HazmatSuit", "PoliceSuit", "PrisonerSuit", "LabCoat", "CultistSuit", "ImperialSpecialForcesArmor", "Dynamite"]
 
 Equipments.getList = () => {
   return Object.values(Equipments).filter((klass) => {

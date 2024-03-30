@@ -155,6 +155,7 @@ class Sector {
     this.initButtons(entities)
     this.initCommandBlock(entities)
     this.initBuildLimits(entities)
+    this.initKeyCodes(entities)
 
     this.initObjectives()
 
@@ -192,6 +193,14 @@ class Sector {
 
   setBuildLimit(klassName, limit) {
     this.buildLimits[klassName] = limit
+  }
+
+  initKeyCodes(entities) {
+    this.keyCodes = {}
+
+    if(!entities || !entities.keyCodes) return
+
+    this.keyCodes = entities.keyCodes
   }
 
   getBuildLimit(klassName) {

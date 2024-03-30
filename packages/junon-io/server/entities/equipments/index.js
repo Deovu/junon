@@ -37,6 +37,8 @@ Equipments.SquidStaff = require("./hand/squid_staff")
 Equipments.RocketLauncher = require("./hand/rocket_launcher")
 Equipments.Scar17 = require("./hand/scar_17")
 Equipments.Bowl = require("./hand/bowl")
+Equipments.Deconstructor = require("./hand/deconstructor")
+Equipments.Dynamite = require("./hand/dynamite")
 
 Equipments.SpaceSuit = require("./armor/space_suit")
 Equipments.CombatArmor = require("./armor/combat_armor")

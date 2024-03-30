@@ -1110,6 +1110,19 @@
         "los": 256
       }
     },
+    "Sapper": {
+      "parent": "Mobs.Guard",
+      "sprite": {
+        "width": 60,
+        "height": 181
+      },
+      "stats": {
+        "health": 350,
+        "damage": 80,
+        "range": 400,
+        "los": 256
+      }
+    },
     "Chemist": {
       "parent": "Mobs.BaseMob",
       "hasBlood": true,
@@ -1901,6 +1914,17 @@
       },
       "categories": {"distance_dependent_width": true}
     },
+    "BlueLaser": {
+      "width": 5,
+      "height": 5,
+      "speed": 15,
+      "damage": 75,
+      "sprite": {
+        "width": 32,
+        "height": 4
+      }
+
+    },
     "MiningBeam": {
       "width": 32,
       "height": 32,
@@ -1972,6 +1996,12 @@
       "height": 16,
       "speed": 8
     },
+    "Dynamite": {
+      "canDamageWalls": true,
+      "width": 16,
+      "height": 16,
+      "speed": 8
+    },
     "MolotovCocktail": {
       "canDamageWalls": false,
       "width": 24,
@@ -1998,6 +2028,13 @@
       "width": 192,
       "height": 192,
       "damage": 25,
+      "speed": 1
+    },
+    "MiningExplosion": {
+      "canDamageWalls": true,
+      "width": 192,
+      "height": 192,
+      "damage": 10,
       "speed": 1
     },
     "Flame": {
@@ -2584,7 +2621,7 @@
         "Rice": 1,
         "Bottle": 1
       },
-      "description": "Japanese rice wine. Favorite beverage of Kamikaze."
+      "description": "Japanese rice wine."
     },
     "EnergyDrink": {
       "width": 24,
@@ -3322,7 +3359,7 @@
         "Glass": 2,
         "CopperBar": 5
       },
-      "description": "Lit things on fire. Refill with FuelTank"
+      "description": "Light things on fire. Refill with FuelTank"
     },
     "NameTag": {
       "parent": "Equipments.MeleeEquipment",
@@ -3435,6 +3472,34 @@
         "Wire": 5
       },
       "description": "Mines Asteroids faster. Damage 5"
+    },
+    "Deconstructor": {
+      "parent": "Equipments.BaseEquipment",
+      "canDamageWalls": true,
+      "isWeapon": true,
+      "isFireArm": true,
+      "cost": {
+        "gold": 2050
+      },
+      "stats": {
+        "range": 1500,
+        "damage": 100,
+        "health": 20,
+        "reload": 2000
+      },
+      "requirements": {
+        "IronBar": 95,
+        "CopperBar": 215,
+        "Wire": 10,
+        "CircuitBoard": 20
+      },
+      "sprite": {
+        "position": {
+          "x": 67,
+          "y": 20
+        }
+      },
+      "description": "An energy powered gun which easily destroys buildings"
     },
     "Pistol": {
       "parent": "Equipments.BaseEquipment",
@@ -3655,6 +3720,27 @@
         "Poison": 1
       },
       "description": "Throwable item that emits poison to an area"
+    },
+    "Dynamite": {
+      "parent": "Equipments.MeleeEquipment",
+      "isWeapon": true,
+      "isThrowable": true,
+      "isUnbreakable": true,
+      "isStackable": true,
+      "isCostIndependent": true,
+      "cost": {
+        "gold": 1500
+      },
+      "stats": {
+        "damage": 10,
+        "range": 256,
+        "reload": 900
+      },
+      "requirements": {
+        "Explosives": 30,
+        "IronOre": 5
+      },
+      "description": "Creates an explosion that easily destroys asteroids that can't be salvaged."
     },
     "FireExtinguisher": {
       "parent": "Equipments.BaseEquipment",
@@ -4536,6 +4622,22 @@
     }
   },
   "Buildings": {
+    "UnbreakableWall": {
+      "isAbstract": true,
+      "isAirtight": true,
+      "width": 32,
+      "height": 32,
+      "cost": {
+        "gold": 70
+      },
+      "stats": {
+        "health": 750,
+        "speed": 1,
+        "count": 1
+      },
+      "description": "A sturdy, airtight wall, that only the owner of a world/sector can place or break."
+      
+    },
     "HangarCornerBlock": {
       "width": 32,
       "height": 32,
@@ -5290,6 +5392,33 @@
         "count": "+25"
       },
       "description": "Door that restricts access to certain personnels only"
+    },
+    "KeypadDoor": {
+      "hasMenu": true,
+      "width": 128,
+      "height": 32,
+      "requirements": {
+        "IronBar": 35,
+        "CircuitBoard": 30,
+        "Wire": 15
+      },
+      "cost": {
+        "gold": 800
+      },
+      "stats": {
+        "health": 300,
+        "count": 125
+      },
+      "isInteractable": true,
+      "minimapColor": "#3bceaa",
+      "showInteractTooltip": true,
+      "isAirtight": true,
+      "categories": {"door":true,"melee_resistant":true},
+      "upgrade": {
+        "health": "+25",
+        "count": "+25"
+      },
+      "description": "Only opens if you have the code"
     },
     "SolarPanel": {
       "width": 64,
